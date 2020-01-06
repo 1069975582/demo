@@ -1,0 +1,6 @@
+mq:
+  active:
+    username: admin
+    password: admin
+    broker:
+      url: failover:tcp://192.168.56.10:61616

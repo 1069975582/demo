@@ -13,10 +13,22 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation ('org.springframework.boot:spring-boot-starter') {
+        // 移除自带的logback依赖包
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    // 引入spring-tx事务
+    compile group: "org.springframework", name: 'spring-tx'
+    // 引入slf4j
+    compile group: "slf4j-log4j12", name: 'org.slf4j'
+    // activeMQ all jar
+    compile group: 'org.apache.activemq', name: 'activemq-all', version: '5.15.11'
+    // lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+
 }
 
 test {
