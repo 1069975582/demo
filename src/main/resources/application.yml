@@ -6,6 +6,6 @@ mq:
       url: failover:tcp://192.168.56.10:61616
 cached:
   redis:
-    addr: 192.168.56.10
+    host: 192.168.56.10
     port: 6379
     
