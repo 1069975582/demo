@@ -1,6 +1,7 @@
 package com.echo.concurrent;
 
-import org.junit.Test;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.concurrent.CyclicBarrier;
@@ -11,6 +12,7 @@ import java.util.concurrent.CyclicBarrier;
  * @date 2020/1/9 13:10
  */
 @SpringBootTest
+@Slf4j
 public class CyclicBarrierTestTest {
 
     @Test

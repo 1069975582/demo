@@ -18,7 +18,9 @@ public class CyclicBarrierTest extends Thread{
         for (int i = 0; i < 10; i++) {
             String name = Thread.currentThread().getName();
             try {
-                Thread.sleep(3000);
+                // log.info("线程{}第{}次达到,休眠前",Thread.currentThread().getName(), i);
+                // Thread.sleep(3000);
+                // log.info("线程{}第{}次达到,休眠后",Thread.currentThread().getName(), i);
                 int arrivalIndex = cyclicBarrier.await();
                 log.info("线程{}到达顺序:{},到达次数:{}", name, arrivalIndex, i+1);
             } catch (InterruptedException | BrokenBarrierException e) {
